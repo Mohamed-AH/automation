@@ -3,12 +3,13 @@
 
 This project automates the process of creating work orders, inputting item details, and uploading PDFs in a business system.
 
+```
 Auto/
-├── itemAndQty/             # Item and quantity scripts
-├── upload/                 # Upload automation
-│   ├── Autoit/            # AutoIt scripts and exe
-│   
-└── woCreation/            # Work order creation scripts
+├── itemAndQty/          # Item and quantity scripts
+├── upload/             # Upload automation
+│   └── Autoit/        # AutoIt scripts and exe
+└── woCreation/        # Work order creation scripts
+```
 
 
 ## Scripts and Their Functions
