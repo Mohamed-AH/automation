@@ -2,6 +2,7 @@
 /Data/
 /upload/pre/
 /upload/pdfs/
+/other backup/
 
 # Configuration and sensitive files
 run_workorder.bat
