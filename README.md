@@ -24,9 +24,9 @@ Auto/
 - `itemAndQty.sh`: Interacts with the web page to insert item numbers and quantities into respective work orders
 
 ### PDF Upload
-- `update_vbs.py`: Reads data from `upload.txt` and updates the array in `working.vbs`
+- `update_vbs.py`: Reads data from `upload.txt` and updates the array in `workorder_process.vbs`
 - `openIE.vbs`: Opens a blank Internet Explorer page
-- `working.vbs`: Interacts with Internet Explorer to navigate menus and initiate PDF uploads
+- `workorder_process.vbs`: Interacts with Internet Explorer to navigate menus and initiate PDF uploads
 - `UploadFile.au3/exe` (AutoIt): Simulates user interaction for file selection during upload
 
 ## Workflow
