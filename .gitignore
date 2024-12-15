@@ -1,0 +1,29 @@
+# Directories to ignore
+/Data/
+/upload/pre/
+/upload/pdfs/
+/otherBackup/
+
+# Configuration and sensitive files
+run_workorder.bat
+*.config
+*.env
+*.backup
+
+# Generated and temporary files
+*.log
+*.pdf
+~$*
+*.tmp
+*.temp
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files (optional, add if you use these)
+.vscode/
+.idea/
+*.suo
+*.user
