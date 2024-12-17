@@ -1,0 +1,11 @@
+  	Distribution AAI Number 4124 Invalid  	
+ER Details:	
+    Form  	P31113_W31113A
+    Control Id  	12
+    Control Title  	OK
+    Event  	Button clicked
+    Line No  	17
+BSFN Details:	
+    Source File  	b4000351.c
+    Source Line  	538
+    Error ID  	029P
