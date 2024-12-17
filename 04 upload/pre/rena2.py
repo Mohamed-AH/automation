@@ -12,7 +12,7 @@ def rename_files():
         # Pair numbers with files in serial order
         for i, new_num in enumerate(new_numbers, 1):
             # Format old filename using the new pattern
-            old_file = os.path.join(base_dir, f"WO2-12-2024 {i}.pdf")
+            old_file = os.path.join(base_dir, f"WO-15-12-2024 {i}.pdf")
             new_file = os.path.join(base_dir, f"{new_num}.pdf")
             
             if os.path.exists(old_file):
