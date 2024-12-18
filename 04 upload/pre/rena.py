@@ -5,13 +5,13 @@ def rename_files():
     with open('names.txt', 'r') as f:
         new_numbers = [line.strip() for line in f.readlines()]
     
-    base_dir = r"D:\auto\upload\pre"
+    base_dir = r"D:\auto\04 upload\pre"
     
     try:
         # Pair numbers with files in serial order
         for i, new_num in enumerate(new_numbers, 1):
             # Format old filename using the specified pattern
-            old_file = os.path.join(base_dir, f"WO2-12-2024 {i}.pdf")
+            old_file = os.path.join(base_dir, f"WO-18-12-2024 {i}.pdf")
             new_file = os.path.join(base_dir, f"{new_num}.pdf")
             
             if os.path.exists(old_file):
