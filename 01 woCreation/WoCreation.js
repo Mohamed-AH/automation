@@ -108,19 +108,27 @@ const triggerAdd = async () => {
 
 // Queue to store work orders to be processed
 const workOrderQueue = [
-    { branch: '70032', wo: '33', isFirstRun: true },
-    { branch: '70032', wo: '34', isFirstRun: false },
-    { branch: '70032', wo: '35', isFirstRun: false },
-    { branch: '70032', wo: '36', isFirstRun: false },
-    { branch: '70032', wo: '37', isFirstRun: false },
-    { branch: '70032', wo: '38', isFirstRun: false },
-    { branch: '70032', wo: '39', isFirstRun: false },
-    { branch: '70032', wo: '40', isFirstRun: false },
-    { branch: '70032', wo: '41', isFirstRun: false },
-    { branch: '70032', wo: '42', isFirstRun: false },
-    { branch: '70032', wo: '43', isFirstRun: false },
-    { branch: '70032', wo: '44', isFirstRun: false },
-    { branch: '70032', wo: '45', isFirstRun: false }
+    { branch: '70028', wo: '321', isFirstRun: true },
+    { branch: '70033', wo: '7164', isFirstRun: false },
+    { branch: '70033', wo: '7119', isFirstRun: false },
+    { branch: '70033', wo: '7135', isFirstRun: false },
+    { branch: '70033', wo: '7126', isFirstRun: false },
+    { branch: '70033', wo: '7150', isFirstRun: false },
+    { branch: '70033', wo: '7159', isFirstRun: false },
+    { branch: '70033', wo: '7128', isFirstRun: false },
+    { branch: '70040', wo: '7008', isFirstRun: false },
+    { branch: '70040', wo: '7124', isFirstRun: false },
+    { branch: '70040', wo: '7134', isFirstRun: false },
+    { branch: '70040', wo: '7130', isFirstRun: false },
+    { branch: '70040', wo: '7129', isFirstRun: false },
+    { branch: '70040', wo: '7155', isFirstRun: false },
+    { branch: '70052', wo: '7140', isFirstRun: false },
+    { branch: '70052', wo: '7127', isFirstRun: false },
+    { branch: '70052', wo: '7154', isFirstRun: false },
+    { branch: '70052', wo: '7125', isFirstRun: false },
+    { branch: '70057', wo: '7142', isFirstRun: false },
+    { branch: '70028', wo: '322', isFirstRun: false },
+    { branch: '70028', wo: '323', isFirstRun: false }
 ];
 
 // Helper function to click Cancel button
