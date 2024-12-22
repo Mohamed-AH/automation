@@ -1,0 +1,27 @@
+We need to extract the following data from the attached PDFs and export it as a single CSV in this format:'Project Number, Work Order Number, Item Number, Issued Qty'
+1. Project Number:
+   * 5-digit number starting with 7
+   * Follows the words 'Project' after the project name is mentioned
+   * Only one Project Number per sheet/page
+   * CUC project number is 70028 if not mentioned
+2. Work Order Number:
+   * Follows the words 'Work Order #' or 'WO' (case-insensitive)
+   * One number per page
+   * May be handwritten
+   * Ignore the title 'Work Order Form F-805-01-01'
+3. Item Numbers:
+   * Combination of characters (alphabets), numbers, hyphens, and dots
+   * Found in the 'Material Information' table under the 'BTAT Item Number' column
+   * Multiple entries per page
+   * if the item number starts with OC the 6th character should be a space
+4. Issued Qty:
+   * Numeric value
+   * Found in the 'Material Information' table (issued QTY)
+   * One entry per Item Number
+   * May be blank if no stock
+   * May be handwritten
+Additional Instructions:
+* Include headers in the CSV file
+* Process the PDF into a single CSV file
+* If data is missing or unclear, leave the field blank in the CSV
+* accuracy is most important, never guess or make up values
