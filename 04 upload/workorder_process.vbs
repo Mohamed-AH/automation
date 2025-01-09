@@ -290,7 +290,7 @@ Sub ProcessWorkOrders()
     
     ' Process work orders
     Dim workOrders, wo
-    workOrders = Array("610656","610657","610658","610659","610660","610661","610662","610663","610664","610665","610666","610667","610668","610669","610670","610671","610672","610673","610674","610675")
+    workOrders = Array("610676","610677","610678","610679","610680","610681","610682","610683")
     
     For Each wo In workOrders
         If fso.FileExists(PDF_PATH & wo & ".pdf") Then
