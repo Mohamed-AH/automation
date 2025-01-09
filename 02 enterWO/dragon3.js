@@ -194,7 +194,7 @@ const csvData = `610659,R19"-6HE,4
 610659,XCI,44
 610659,WAPL,272
 610659,9300-24T-A,4
-610659,PWR-C1-350WAC-P,4
+610659,PWR-C1-350WAC,4
 610659,C9300-NM-8X,4
 610659,SFP-10G-LR,12`.split('\n').forEach(line => {
     const [workOrder, itemNumber, quantity] = line.split(',');
