@@ -108,12 +108,33 @@ const triggerAdd = async () => {
 
 // Queue to store work orders to be processed
 const workOrderQueue = [
-    { branch: '70032', wo: '2025-233', isFirstRun: true },
-    { branch: '70032', wo: '2025-234', isFirstRun: false },
-    { branch: '70032', wo: '2025-235', isFirstRun: false },
-    { branch: '70032', wo: '2025-236', isFirstRun: false },
-    { branch: '70032', wo: '2025-237', isFirstRun: false },
-    { branch: '70032', wo: '2025-238', isFirstRun: false }
+    { branch: '70028', wo: '371', isFirstRun: true },
+    { branch: '70028', wo: '372', isFirstRun: false },
+    { branch: '70028', wo: '373', isFirstRun: false },
+    { branch: '70028', wo: '374', isFirstRun: false },
+    { branch: '70028', wo: '375', isFirstRun: false },
+    { branch: '70028', wo: '376', isFirstRun: false },
+    { branch: '70033', wo: '7854', isFirstRun: false },
+    { branch: '70033', wo: '7832', isFirstRun: false },
+    { branch: '70033', wo: '7901', isFirstRun: false },
+    { branch: '70033', wo: '7928', isFirstRun: false },
+    { branch: '70033', wo: '7934', isFirstRun: false },
+    { branch: '70033', wo: '7938', isFirstRun: false },
+    { branch: '70033', wo: '7942', isFirstRun: false },
+    { branch: '70033', wo: '7949', isFirstRun: false },
+    { branch: '70033', wo: '7958', isFirstRun: false },
+    { branch: '70033', wo: '7971', isFirstRun: false },
+    { branch: '70033', wo: '7980', isFirstRun: false },
+    { branch: '70033', wo: '7982', isFirstRun: false },
+    { branch: '70033', wo: '7992', isFirstRun: false },
+    { branch: '70033', wo: '7995', isFirstRun: false },
+    { branch: '70033', wo: '7998', isFirstRun: false },
+    { branch: '70033', wo: '8001', isFirstRun: false },
+    { branch: '70033', wo: '8009', isFirstRun: false },
+    { branch: '70033', wo: '8012', isFirstRun: false },
+    { branch: '70033', wo: '8020', isFirstRun: false },
+    { branch: '70033', wo: '7916', isFirstRun: false },
+    { branch: '70033', wo: '7989', isFirstRun: false }
 ];
 
 // Helper function to click Cancel button
