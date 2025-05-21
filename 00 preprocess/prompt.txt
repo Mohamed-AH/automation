@@ -6,6 +6,7 @@ We need to extract the following data from the attached PDFs and export it as a 
    * CUC project number is 70028 if not mentioned
 2. Work Order Number:
    * Follows the words 'Work Order #' or 'WO' (case-insensitive)
+   * the Work Order number normally will not contain dot "." , the dots might appear cause of the dotted underline and if so they are to be ignored
    * One number per page
    * May be handwritten
    * Ignore the title 'Work Order Form F-805-01-01'
