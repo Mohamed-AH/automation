@@ -397,18 +397,17 @@ window.issuesAutomation = {
     processAllIssues,
     processWorkOrderIssues,
     workOrders: [
-        '611932',
-        '611933',
-        '611934',
-        '611935',
-        '611936',
-        '611937',
-        '611938',
-        '611939',
-        '611940',
-        '611941',
-        '611942',
-        '611943'
+        '611944',
+        '611945',
+        '611946',
+        '611947',
+        '611948',
+        '611949',
+        '611950',
+        '611951',
+        '611952',
+        '611953',
+        '611954'
     ],
     start: function() {
         return this.processAllIssues(this.workOrders);
