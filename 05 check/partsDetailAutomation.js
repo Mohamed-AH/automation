@@ -465,7 +465,7 @@ async function processSingleWorkOrder(workOrderNumber) {
 // --- Automation System Setup ---
 
 // Array to hold the queue of work orders. This can be modified externally.
-const workOrderQueue = ["611944", "611945", "611946", "611947", "611948", "611949", "611950", "611951", "611952", "611953", "611954"];
+const workOrderQueue = ["611928", "611929", "611930", "611931", "611932", "611933"];
 const processedResults = []; // To store results of processed work orders
 
 /**
@@ -480,10 +480,30 @@ async function processWorkOrders() {
     window.partsDetailAutomation.workOrderQueue.length = 0; // Clear the original queue
     processedResults.length = 0; // Clear previous results
 
+    // Map to store part numbers with remaining quantities and the work orders they appear in
+    // Key: Part Number (string)
+    // Value: Set of Work Order Numbers (Set<string>)
+    const partsWithRemainingQty = new Map();
+
     for (let i = 0; i < currentQueue.length; i++) {
         const woNum = currentQueue[i];
         const result = await processSingleWorkOrder(woNum);
         processedResults.push(result);
+
+        // Check for parts with remaining quantities and aggregate them
+        if (result["Items Left in Qty Aval Current - Project"] === "Yes" && result.Details.length > 0) {
+            result.Details.forEach(part => {
+                if (part["Qty Aval Current - Project"] > 0) {
+                    const partNumber = part["Part Number"];
+                    if (partNumber) { // Ensure part number is not empty
+                        if (!partsWithRemainingQty.has(partNumber)) {
+                            partsWithRemainingQty.set(partNumber, new Set());
+                        }
+                        partsWithRemainingQty.get(partNumber).add(woNum);
+                    }
+                }
+            });
+        }
 
         if (i < currentQueue.length - 1) {
             console.log(`Waiting 3 seconds before processing next work order...`);
@@ -501,6 +521,18 @@ async function processWorkOrders() {
         "Error": res.error || "None"
     }));
     console.table(summaryData);
+
+    // New section for parts with remaining quantities
+    if (partsWithRemainingQty.size > 0) {
+        console.log("\n--- Parts with Remaining 'Qty Aval Current - Project' Across Batch ---");
+        partsWithRemainingQty.forEach((workOrders, partNumber) => {
+            console.log(`Part Number: ${partNumber}`);
+            console.log(`  Present in Work Orders: ${Array.from(workOrders).join(', ')}`);
+        });
+        console.log("\nManual inspection of these work orders is recommended for probable errors.");
+    } else {
+        console.log("\nNo parts found with remaining 'Qty Aval Current - Project' in this batch. Current summary is OK.");
+    }
 
     console.log("\nBatch Processing Finished.");
     return processedResults;
