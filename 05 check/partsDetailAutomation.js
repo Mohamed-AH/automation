@@ -465,7 +465,7 @@ async function processSingleWorkOrder(workOrderNumber) {
 // --- Automation System Setup ---
 
 // Array to hold the queue of work orders. This can be modified externally.
-const workOrderQueue = ["611928", "611929", "611930", "611931", "611932", "611933"];
+const workOrderQueue = ["611968", "611969", "611970", "611971", "611972", "611973", "611974", "611975", "611976", "611977", "611978", "611979", "611980", "611981", "611982", "611983", "611984", "611985", "611986", "611987", "611988", "611989", "611990", "611991", "611992"];
 const processedResults = []; // To store results of processed work orders
 
 /**
