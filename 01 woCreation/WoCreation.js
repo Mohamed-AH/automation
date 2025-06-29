@@ -108,19 +108,25 @@ const triggerAdd = async () => {
 
 // Queue to store work orders to be processed
 const workOrderQueue = [
-    { branch: '70033', wo: '8077', isFirstRun: true },
-    { branch: '70033', wo: '8098', isFirstRun: false },
-    { branch: '70033', wo: '8100', isFirstRun: false },
-    { branch: '70033', wo: '8102', isFirstRun: false },
-    { branch: '70033', wo: '8089', isFirstRun: false },
-    { branch: '70039', wo: '8060', isFirstRun: false },
-    { branch: '70049', wo: '8061', isFirstRun: false },
-    { branch: '70052', wo: '8090', isFirstRun: false },
-    { branch: '70052', wo: '8099', isFirstRun: false },
-    { branch: '70052', wo: '8091', isFirstRun: false },
-    { branch: '70052', wo: '8095', isFirstRun: false },
-    { branch: '70052', wo: '8097', isFirstRun: false },
-    { branch: '70028', wo: '381', isFirstRun: false }
+    { branch: '70033', wo: '8088', isFirstRun: true },
+    { branch: '70033', wo: '8094', isFirstRun: false },
+    { branch: '70033', wo: '8103', isFirstRun: false },
+    { branch: '70033', wo: '8101', isFirstRun: false },
+    { branch: '70040', wo: '8105', isFirstRun: false },
+    { branch: '70040', wo: '8093', isFirstRun: false },
+    { branch: '70032', wo: '2025-283', isFirstRun: false },
+    { branch: '70032', wo: '2025-284', isFirstRun: false },
+    { branch: '70032', wo: '2025-285', isFirstRun: false },
+    { branch: '70032', wo: '2025-286', isFirstRun: false },
+    { branch: '70032', wo: '2025-287', isFirstRun: false },
+    { branch: '70032', wo: '2025-288', isFirstRun: false },
+    { branch: '70032', wo: '2025-289', isFirstRun: false },
+    { branch: '70032', wo: '2025-290', isFirstRun: false },
+    { branch: '70032', wo: '2025-291', isFirstRun: false },
+    { branch: '70032', wo: '2025-292', isFirstRun: false },
+    { branch: '70032', wo: '2025-293', isFirstRun: false },
+    { branch: '70032', wo: '2025-294', isFirstRun: false },
+    { branch: '70032', wo: '2025-295', isFirstRun: false }
 ];
 
 // Helper function to click Cancel button
