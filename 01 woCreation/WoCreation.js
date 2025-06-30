@@ -108,9 +108,7 @@ const triggerAdd = async () => {
 
 // Queue to store work orders to be processed
 const workOrderQueue = [
-    { branch: '70033', wo: '8082', isFirstRun: true },
-    { branch: '70033', wo: '8085', isFirstRun: false },
-    { branch: '70033', wo: '8118', isFirstRun: false },
+    { branch: '70033', wo: '8118', isFirstRun: true },
     { branch: '70033', wo: '8122', isFirstRun: false },
     { branch: '70040', wo: '8083', isFirstRun: false },
     { branch: '70043', wo: '8084', isFirstRun: false },
