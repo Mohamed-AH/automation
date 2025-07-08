@@ -108,33 +108,18 @@ const triggerAdd = async () => {
 
 // Queue to store work orders to be processed
 const workOrderQueue = [
-    { branch: '70037', wo: '25-001', isFirstRun: true },
-    { branch: '70037', wo: '25-002', isFirstRun: false },
-    { branch: '70060', wo: '51', isFirstRun: false },
-    { branch: '70060', wo: '52', isFirstRun: false },
-    { branch: '70060', wo: '56', isFirstRun: false },
-    { branch: '70060', wo: '57', isFirstRun: false },
-    { branch: '70060', wo: '58', isFirstRun: false },
-    { branch: '70060', wo: '59', isFirstRun: false },
-    { branch: '70060', wo: '60', isFirstRun: false },
-    { branch: '70033', wo: '8104', isFirstRun: false },
-    { branch: '70033', wo: '8055', isFirstRun: false },
-    { branch: '70033', wo: '8164', isFirstRun: false },
-    { branch: '70033', wo: '8159', isFirstRun: false },
-    { branch: '70033', wo: '8168', isFirstRun: false },
-    { branch: '70033', wo: '8069', isFirstRun: false },
-    { branch: '70033', wo: '8123', isFirstRun: false },
-    { branch: '70033', wo: '8117', isFirstRun: false },
-    { branch: '70033', wo: '8116', isFirstRun: false },
-    { branch: '70033', wo: '8142', isFirstRun: false },
-    { branch: '70033', wo: '8171', isFirstRun: false },
-    { branch: '70033', wo: '8106', isFirstRun: false },
-    { branch: '70033', wo: '8169', isFirstRun: false },
-    { branch: '70033', wo: '8152', isFirstRun: false },
-    { branch: '70043', wo: '8167', isFirstRun: false },
-    { branch: '70040', wo: '8166', isFirstRun: false },
-    { branch: '70040', wo: '8172', isFirstRun: false },
-    { branch: '70040', wo: '8163', isFirstRun: false }
+    { branch: '70033', wo: '8174', isFirstRun: true },
+    { branch: '70033', wo: '8150', isFirstRun: false },
+    { branch: '70039', wo: '8056', isFirstRun: false },
+    { branch: '70039', wo: '8148', isFirstRun: false },
+    { branch: '70040', wo: '8176', isFirstRun: false },
+    { branch: '70040', wo: '8173', isFirstRun: false },
+    { branch: '70040', wo: '8170', isFirstRun: false },
+    { branch: '70040', wo: '8149', isFirstRun: false },
+    { branch: '70043', wo: '8151', isFirstRun: false },
+    { branch: '70052', wo: '8180', isFirstRun: false },
+    { branch: '70052', wo: '8175', isFirstRun: false },
+    { branch: '70052', wo: '8177', isFirstRun: false }
 ];
 
 // Helper function to click Cancel button
