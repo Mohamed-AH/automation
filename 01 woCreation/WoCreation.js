@@ -108,16 +108,13 @@ const triggerAdd = async () => {
 
 // Queue to store work orders to be processed
 const workOrderQueue = [
-    { branch: '70032', wo: '2025-311', isFirstRun: true },
-    { branch: '70032', wo: '2025-312', isFirstRun: false },
-    { branch: '70032', wo: '2025-313', isFirstRun: false },
-    { branch: '70032', wo: '2025-314', isFirstRun: false },
-    { branch: '70032', wo: '2025-315', isFirstRun: false },
-    { branch: '70032', wo: '2025-316', isFirstRun: false },
-    { branch: '70032', wo: '2025-317', isFirstRun: false },
-    { branch: '70032', wo: '2025-318', isFirstRun: false },
-    { branch: '70032', wo: '2025-319', isFirstRun: false },
-    { branch: '70032', wo: '2025-320', isFirstRun: false }
+    { branch: '70033', wo: '8196', isFirstRun: true },
+    { branch: '70033', wo: '8191', isFirstRun: false },
+    { branch: '70040', wo: '8189', isFirstRun: false },
+    { branch: '70040', wo: '8192', isFirstRun: false },
+    { branch: '70040', wo: '8190', isFirstRun: false },
+    { branch: '70052', wo: '8195', isFirstRun: false },
+    { branch: '70052', wo: '8194', isFirstRun: false }
 ];
 
 // Helper function to click Cancel button
