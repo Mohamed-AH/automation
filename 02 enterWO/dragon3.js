@@ -178,12 +178,7 @@ async function selectPartsDetail() {
 const workOrderItems = new Map();
 
 // Parse CSV data and organize by work order
-const csvData = `612570,5307114,8
-612571,5307114,6
-612571,VX IT 5307,4
-612572,GLC-FE-100LX=,1000
-612572,DK7827.320,16
-612573,E0100,508
+const csvData = `612573,E0100,508
 612573,1652RT,500
 612573,CRH-662RT,500
 612573,USCE100,100
