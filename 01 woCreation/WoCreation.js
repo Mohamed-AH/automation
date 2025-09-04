@@ -108,17 +108,29 @@ const triggerAdd = async () => {
 
 // Queue to store work orders to be processed
 const workOrderQueue = [
-    { branch: '70033', wo: '8572', isFirstRun: true },
-    { branch: '70033', wo: '8607', isFirstRun: false },
-    { branch: '70043', wo: '8608', isFirstRun: false },
-    { branch: '70043', wo: '8573', isFirstRun: false },
-    { branch: '70043', wo: '8548', isFirstRun: false },
-    { branch: '70040', wo: '8610', isFirstRun: false },
-    { branch: '70040', wo: '8556', isFirstRun: false },
-    { branch: '70040', wo: '8331', isFirstRun: false },
-    { branch: '70040', wo: '8554', isFirstRun: false },
-    { branch: '70040', wo: '8500', isFirstRun: false },
-    { branch: '70040', wo: '8606', isFirstRun: false }
+    { branch: '70028', wo: '393', isFirstRun: true },
+    { branch: '70028', wo: '392', isFirstRun: false },
+    { branch: '70033', wo: '8708', isFirstRun: false },
+    { branch: '70033', wo: '8705', isFirstRun: false },
+    { branch: '70033', wo: '8704', isFirstRun: false },
+    { branch: '70033', wo: '8696', isFirstRun: false },
+    { branch: '70033', wo: '8693', isFirstRun: false },
+    { branch: '70033', wo: '8572', isFirstRun: false },
+    { branch: '70040', wo: '8600', isFirstRun: false },
+    { branch: '70040', wo: '8694', isFirstRun: false },
+    { branch: '70040', wo: '8709', isFirstRun: false },
+    { branch: '70040', wo: '8707', isFirstRun: false },
+    { branch: '70052', wo: '8688', isFirstRun: false },
+    { branch: '70052', wo: '8571', isFirstRun: false },
+    { branch: '70052', wo: '8710', isFirstRun: false },
+    { branch: '70034', wo: '149', isFirstRun: false },
+    { branch: '70043', wo: '8716', isFirstRun: false },
+    { branch: '70033', wo: '8695', isFirstRun: false },
+    { branch: '70033', wo: '8605', isFirstRun: false },
+    { branch: '70060', wo: '776', isFirstRun: false },
+    { branch: '70060', wo: '777', isFirstRun: false },
+    { branch: '70060', wo: '781', isFirstRun: false },
+    { branch: '70060', wo: '780', isFirstRun: false }
 ];
 
 // Helper function to click Cancel button
