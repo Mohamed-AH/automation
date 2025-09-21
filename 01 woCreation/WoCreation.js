@@ -108,12 +108,21 @@ const triggerAdd = async () => {
 
 // Queue to store work orders to be processed
 const workOrderQueue = [
-    { branch: '70034', wo: '205', isFirstRun: true },
-    { branch: '70060', wo: '66', isFirstRun: false },
-    { branch: '70060', wo: '784', isFirstRun: false },
-    { branch: '70060', wo: '785', isFirstRun: false },
-    { branch: '70060', wo: '786', isFirstRun: false },
-    { branch: '70060', wo: '787', isFirstRun: false }
+    { branch: '70034', wo: '207', isFirstRun: true },
+    { branch: '70033', wo: '8743', isFirstRun: false },
+    { branch: '70033', wo: '8785', isFirstRun: false },
+    { branch: '70033', wo: '8842', isFirstRun: false },
+    { branch: '70033', wo: '8808', isFirstRun: false },
+    { branch: '70033', wo: '8843', isFirstRun: false },
+    { branch: '70040', wo: '8812', isFirstRun: false },
+    { branch: '70040', wo: '8844', isFirstRun: false },
+    { branch: '70040', wo: '8823', isFirstRun: false },
+    { branch: '70040', wo: '8825', isFirstRun: false },
+    { branch: '70040', wo: '8807', isFirstRun: false },
+    { branch: '70052', wo: '8811', isFirstRun: false },
+    { branch: '70052', wo: '8813', isFirstRun: false },
+    { branch: '70063', wo: '8686', isFirstRun: false },
+    { branch: '70063', wo: '8591', isFirstRun: false }
 ];
 
 // Helper function to click Cancel button
