@@ -24,7 +24,10 @@ Begin with a concise checklist (3-7 bullets) of what you will do; keep items con
    - **Project Number:**
      - Must be a 5-digit number starting with '7'.
      - Appears after 'Project' (following any project name).
-     - Only one per page/sheet. If absent, use '70028' as default for that page.
+     - Only one per page/sheet. If absent, proceed as follows for that page:
+       - If the project name is 'central utility complex (C.U.C) - Makkah', use '70028'.
+       - If the project name is 'HHR-Project Makkah', use '70034'.
+       - Otherwise, use '70000' as the default.
    - **Work Order Number:**
      - Appears after 'Work Order #' or 'WO' (case-insensitive, including handwritten).
      - Exclude any underlining dots; they are not part of the value.
@@ -33,7 +36,9 @@ Begin with a concise checklist (3-7 bullets) of what you will do; keep items con
    - **Item Number:**
      - Located under 'BTAT Item Number' (or similar) in 'Material Information'.
      - Accept header variations or minor errors; match similar columns.
-     - Allow alphanumeric, hyphens, and dots. If starting with 'OC', ensure a space at the 6th character (add one if required).
+     - Allow alphanumeric, hyphens, and dots.
+     - **If an Item Number starts with 'OC', ensure that a space exists at the 6th character position. If there is no space at that position, insert a single space so that the resulting Item Number has a space after the first five characters. For example, 'OC23422' should be formatted as 'OC234 22'. This rule must be applied strictly for every relevant value.**
+     - **This also applies to Item Numbers such as 'OC-13-013-018-0039': ensure that after extracting the Item Number, there is a space at the 6th character position (e.g., 'OC-13- 013-018-0039'). Apply this space regardless of the presence of additional hyphens or formatting within the Item Number. Always check and enforce the space-at-6th-position rule for all Item Numbers that start with 'OC'.**
    - **Issued Qty:**
      - From 'Issued QTY' (or similar) column.
      - One per Item Number. Leave blank if absent or marked 'no stock'.
@@ -53,9 +58,11 @@ Begin with a concise checklist (3-7 bullets) of what you will do; keep items con
 - Example:
 
 ```csv
-Project Number,Work Order Number, Item Number, Issued Qty
-70001,WO12345,AB-001,8
-70001,WO12345,OC-234 2,5
+Project Number,Work Order Number,Item Number,Issued Qty
+70063,8881,OC-13- 013-001-0003,60
+70063,8881,PMD-HT-0201,60
+70063,8881,25-0301-00008,60
+70063,8881,OC-13- 013-026-0004,150
 ```
 
 - For any missing or unclear field, leave the respective position empty in the row.
@@ -65,4 +72,5 @@ After generating the CSV, validate that:
 - All rows conform to output format and header requirements.
 - The extraction rules for each field are strictly observed.
 - The output does not introduce or fabricate values; blank fields only if justified by input data.
+- **Specifically validate that all Item Numbers starting with 'OC' adhere to the space-at-6th-position requirement. Any row where this is not the case should be corrected and extraction re-run if necessary. This check must account for Item Numbers such as 'OC-13-013-018-0039', enforcing a space after the fifth character regardless of character type.**
 If validation fails, self-correct and re-run extraction for affected items/pages.
