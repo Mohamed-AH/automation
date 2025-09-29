@@ -130,7 +130,11 @@ const workOrderQueue = [
     { branch: '70052', wo: '8854', isFirstRun: false },
     { branch: '70052', wo: '8858', isFirstRun: false },
     { branch: '70063', wo: '8881', isFirstRun: false },
-    { branch: '70034', wo: '222', isFirstRun: false }
+    { branch: '70034', wo: '222', isFirstRun: false },
+    { branch: '70040', wo: '8879', isFirstRun: false },
+    { branch: '70040', wo: '8896', isFirstRun: false },
+    { branch: '70052', wo: '8878', isFirstRun: false },
+    { branch: '70063', wo: '8880', isFirstRun: false }
 ];
 
 // Helper function to click Cancel button
