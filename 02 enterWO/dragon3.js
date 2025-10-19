@@ -178,20 +178,12 @@ async function selectPartsDetail() {
 const workOrderItems = new Map();
 
 // Parse CSV data and organize by work order
-const csvData = `613425,BELDEN 4000UE,1
-613426,BELDEN 4000UE,1
-613427,USC200,310
-613427,LP-FXN-WSR-FLT-GL1122,1100
-613427,SEL-W360150,40
-613427,13-3508-00048,60
-613427,HFC300HUVB,40
-613428,X2 MD30,6
-613429,004E8J-EG115EYL,5150
-613429,004E8J-EG114EGR,4034
-613430,C-R00075,8146
-613430,C-RCN075,4300
-613430,C-RS2075,40000
-613430,B-AB2104,120`.split('\n').forEach(line => {
+const csvData = `613432,03-1605-00003,110
+613431,03-2790-00002,1
+613433,WS-C2960X-24PS-L,8
+613434,FBXSCUC11-MXF005,20
+613434,FBXLCUC11-MXF005,63
+613435,03-1307-00022,59`.split('\n').forEach(line => {
     const [workOrder, itemNumber, quantity] = line.split(',');
     if (!workOrderItems.has(workOrder)) {
         workOrderItems.set(workOrder, []);
