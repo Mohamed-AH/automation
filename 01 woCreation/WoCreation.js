@@ -108,18 +108,36 @@ const triggerAdd = async () => {
 
 // Queue to store work orders to be processed
 const workOrderQueue = [
-    { branch: '70033', wo: '9057', isFirstRun: true },
-    { branch: '70033', wo: '9042', isFirstRun: false },
+    { branch: '70033', wo: '9153', isFirstRun: true },
+    { branch: '70033', wo: '9151', isFirstRun: false },
+    { branch: '70033', wo: '9116', isFirstRun: false },
+    { branch: '70033', wo: '9134', isFirstRun: false },
     { branch: '70033', wo: '9098', isFirstRun: false },
-    { branch: '70033', wo: '9117', isFirstRun: false },
-    { branch: '70033', wo: '9157', isFirstRun: false },
-    { branch: '70033', wo: '9123', isFirstRun: false },
-    { branch: '70033', wo: '9126', isFirstRun: false },
-    { branch: '70033', wo: '9127', isFirstRun: false },
-    { branch: '70040', wo: '9121', isFirstRun: false },
-    { branch: '70040', wo: '9122', isFirstRun: false },
-    { branch: '70043', wo: '9115', isFirstRun: false },
-    { branch: '70043', wo: '9129', isFirstRun: false }
+    { branch: '70033', wo: '9113', isFirstRun: false },
+    { branch: '70033', wo: '9162', isFirstRun: false },
+    { branch: '70033', wo: '9142', isFirstRun: false },
+    { branch: '70033', wo: '9132', isFirstRun: false },
+    { branch: '70033', wo: '9146', isFirstRun: false },
+    { branch: '70040', wo: '9097', isFirstRun: false },
+    { branch: '70040', wo: '9124', isFirstRun: false },
+    { branch: '70040', wo: '9109', isFirstRun: false },
+    { branch: '70040', wo: '9114', isFirstRun: false },
+    { branch: '70043', wo: '9143', isFirstRun: false },
+    { branch: '70043', wo: '9133', isFirstRun: false },
+    { branch: '70043', wo: '9147', isFirstRun: false },
+    { branch: '70052', wo: '9145', isFirstRun: false },
+    { branch: '70052', wo: '9141', isFirstRun: false },
+    { branch: '70052', wo: '9125', isFirstRun: false },
+    { branch: '70052', wo: '9128', isFirstRun: false },
+    { branch: '70052', wo: '9130', isFirstRun: false },
+    { branch: '70052', wo: '9086', isFirstRun: false },
+    { branch: '70052', wo: '9140', isFirstRun: false },
+    { branch: '70052', wo: '9158', isFirstRun: false },
+    { branch: '70052', wo: '9099', isFirstRun: false },
+    { branch: '70052', wo: '9160', isFirstRun: false },
+    { branch: '70040', wo: '9100', isFirstRun: false },
+    { branch: '70033', wo: '9120', isFirstRun: false },
+    { branch: '70033', wo: '9161', isFirstRun: false }
 ];
 
 // Helper function to click Cancel button
