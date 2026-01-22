@@ -397,7 +397,17 @@ window.issuesAutomation = {
     processAllIssues,
     processWorkOrderIssues,
     workOrders: [
-        '614647'
+        '614688',
+        '614689',
+        '614690',
+        '614691',
+        '614692',
+        '614693',
+        '614694',
+        '614695',
+        '614696',
+        '614697',
+        '614698'
     ],
     start: function() {
         return this.processAllIssues(this.workOrders);
