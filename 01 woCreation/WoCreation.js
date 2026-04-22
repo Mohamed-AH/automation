@@ -108,21 +108,24 @@ const triggerAdd = async () => {
 
 // Queue to store work orders to be processed
 const workOrderQueue = [
-    { branch: '70032', wo: '2026-578', isFirstRun: true },
-    { branch: '70032', wo: '2026-579', isFirstRun: false },
-    { branch: '70032', wo: '2026-580', isFirstRun: false },
-    { branch: '70032', wo: '2026-581', isFirstRun: false },
-    { branch: '70032', wo: '2026-582', isFirstRun: false },
-    { branch: '70032', wo: '2026-583', isFirstRun: false },
-    { branch: '70032', wo: '2026-584', isFirstRun: false },
-    { branch: '70032', wo: '2026-585', isFirstRun: false },
-    { branch: '70032', wo: '2026-586', isFirstRun: false },
-    { branch: '70032', wo: '2026-587', isFirstRun: false },
-    { branch: '70032', wo: '2026-588', isFirstRun: false },
-    { branch: '70032', wo: '2026-589', isFirstRun: false },
-    { branch: '70032', wo: '2026-590', isFirstRun: false },
-    { branch: '70032', wo: '2026-591', isFirstRun: false },
-    { branch: '70032', wo: '2026-592', isFirstRun: false }
+    { branch: '70033', wo: '9907', isFirstRun: true },
+    { branch: '70033', wo: '9962', isFirstRun: false },
+    { branch: '70033', wo: '9963', isFirstRun: false },
+    { branch: '70033', wo: '9939', isFirstRun: false },
+    { branch: '70033', wo: '9937', isFirstRun: false },
+    { branch: '70033', wo: '9949', isFirstRun: false },
+    { branch: '70033', wo: '9864', isFirstRun: false },
+    { branch: '70033', wo: '9948', isFirstRun: false },
+    { branch: '70033', wo: '9953', isFirstRun: false },
+    { branch: '70033', wo: '9943', isFirstRun: false },
+    { branch: '70033', wo: '9957', isFirstRun: false },
+    { branch: '70040', wo: '9955', isFirstRun: false },
+    { branch: '70040', wo: '9954', isFirstRun: false },
+    { branch: '70043', wo: '9958', isFirstRun: false },
+    { branch: '70052', wo: '9942', isFirstRun: false },
+    { branch: '70052', wo: '9941', isFirstRun: false },
+    { branch: '70052', wo: '9956', isFirstRun: false },
+    { branch: '70063', wo: '9938', isFirstRun: false }
 ];
 
 // Helper function to click Cancel button

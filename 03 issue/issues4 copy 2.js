@@ -258,14 +258,8 @@ async function enterIssueQuantity(rowIndex, quantity) {
 }
 
 // Function to process single work order issues
-async function processWorkOrderIssues(workOrderInput) {
+async function processWorkOrderIssues(workOrder) {
     try {
-        // --- NEW DATA EXTRACTION ---
-        // Handles "614521 01/08/2026" or just "614521"
-        const parts = workOrderInput.trim().split(/[\s\t]+/);
-        const workOrder = parts[0];
-        const extractedDate = parts.length > 1 ? parts[1] : null;
-
         console.log(`Processing issues for Work Order: ${workOrder}`);
         
         const qbeInput = await waitForElementInIframe('input[name="qbe0_1.0"]');
@@ -299,20 +293,6 @@ async function processWorkOrderIssues(workOrderInput) {
 
         await selectInventoryIssues();
         await wait(2000);
-
-        // --- NEW DATE ENTRY LOGIC ---
-        // Enter the date in the entry element C0_90 once before processing items
-        if (extractedDate) {
-            console.log(`Entering date ${extractedDate} into C0_90`);
-            const iframe = document.getElementById('e1menuAppIframe');
-            const dateInput = iframe.contentDocument.getElementById('C0_90');
-            if (dateInput) {
-                dateInput.value = extractedDate;
-                dateInput.dispatchEvent(new Event('change', { bubbles: true }));
-                dateInput.dispatchEvent(new Event('blur', { bubbles: true }));
-                await wait(500);
-            }
-        }
 
         // Check for items immediately
         const firstQuantity = await getQuantityFromCell(0);
@@ -374,14 +354,14 @@ async function processWorkOrderIssues(workOrderInput) {
         };
 
     } catch (error) {
-        console.error(`Error processing WO ${workOrderLine}:`, error);
+        console.error(`Error processing WO ${workOrder}:`, error);
         try {
             await clickCancelButton();
         } catch (cancelError) {
             console.error('Failed to click Cancel after error:', cancelError);
         }
         return {
-            workOrder: workOrderInput,
+            workOrder,
             status: 'failed',
             error: error.message
         };
@@ -417,22 +397,14 @@ window.issuesAutomation = {
     processAllIssues,
     processWorkOrderIssues,
     workOrders: [
-        '614522	01/08/2026',
-        '614523	01/08/2026',
-        '614524	01/08/2026',
-        '614525	01/08/2026',
-        '614526	01/08/2026',
-        '614527	01/08/2026',
-        '614528	01/08/2026',
-        '614529	01/08/2026',
-        '614530	01/08/2026',
-        '614531	01/08/2026',
-        '614532	01/08/2026',
-        '614533	01/08/2026',
-        '614534	01/08/2026',
-        '614535	01/08/2026',
-        '614536	01/08/2026',
-        '614537	01/08/2026'
+        '614510',
+        '614512',
+        '614513',
+        '614514',
+        '614515',
+        '614516',
+        '614517',
+        '614518'
     ],
     start: function() {
         return this.processAllIssues(this.workOrders);
@@ -447,6 +419,6 @@ Total Work Orders to Process: ${window.issuesAutomation.workOrders.length}
 
 Available Commands:
 - Start Processing All: issuesAutomation.start()
-- Process Single WO: issuesAutomation.processWorkOrderIssues('614521\\t01/08/2026')
+- Process Single WO: issuesAutomation.processWorkOrderIssues('workOrderNumber')
 - Process Custom List: issuesAutomation.processAllIssues(['wo1', 'wo2', ...])
 `);
