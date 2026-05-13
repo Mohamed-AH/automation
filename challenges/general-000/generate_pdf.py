@@ -299,6 +299,9 @@ html = f"""<!DOCTYPE html>
   <div class="cover-tag">Single Grain &nbsp;·&nbsp; Open Challenge</div>
   <div class="cover-title">General 000<br>Automation Engineer</div>
   <div class="cover-sub">JDE Work Order Automation &nbsp;<span class="cover-dot"></span>&nbsp; Mohamed AH</div>
+  <div style="margin-top:12pt;">
+    <a href="https://github.com/Mohamed-AH/automation" style="color:rgba(255,255,255,0.85); font-size:9pt; font-weight:500; border-bottom:0.5pt solid rgba(255,255,255,0.35); text-decoration:none; letter-spacing:0.3px;">github.com/Mohamed-AH/automation</a>
+  </div>
 </div>
 
 <!-- ─── Metrics banner ─── -->

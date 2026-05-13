@@ -1,5 +1,7 @@
 # General 000 – Automation Engineer Application
 
+**Repository:** [github.com/Mohamed-AH/automation](https://github.com/Mohamed-AH/automation)
+
 ---
 
 ## Part 1: Role Definition
@@ -102,6 +104,7 @@ This keeps the security boundary clean and sidesteps JDE's bot-detection entirel
 
 | Artifact | Location | Purpose |
 |---|---|---|
+| Repository | [github.com/Mohamed-AH/automation](https://github.com/Mohamed-AH/automation) | Full source code |
 | Upload log | `04 upload/Autoit/upload_log.txt` | Primary evidence — 4,462 timestamped entries |
 | VBScript uploader | `04 upload/workorder_process.vbs` | IE automation + AutoIt delegation |
 | AutoIt handler | `04 upload/Autoit/UploadFile.au3` | Native dialog interaction |
