@@ -13,8 +13,6 @@ html = f"""<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
-
   :root {{
     --accent:   #1a1a2e;
     --accent2:  #16213e;
@@ -29,19 +27,19 @@ html = f"""<!DOCTYPE html>
 
   @page {{
     size: A4;
-    margin: 18mm 18mm 22mm 18mm;
+    margin: 12mm 14mm 16mm 14mm;
     @bottom-center {{
       content: counter(page);
-      font-family: 'Inter', sans-serif;
-      font-size: 9pt;
+      font-family: sans-serif;
+      font-size: 8pt;
       color: #9ca3af;
     }}
   }}
 
   body {{
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 10.5pt;
-    line-height: 1.7;
+    font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 9.5pt;
+    line-height: 1.52;
     color: var(--text);
     background: #fff;
   }}
@@ -50,129 +48,152 @@ html = f"""<!DOCTYPE html>
   .cover {{
     background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 60%, #0f3460 100%);
     color: #fff;
-    padding: 36pt 36pt 28pt 36pt;
-    margin: -18mm -18mm 28pt -18mm;
-    border-bottom: 4pt solid var(--highlight);
+    padding: 18pt 22pt 14pt 22pt;
+    margin: -12mm -14mm 14pt -14mm;
+    border-bottom: 3pt solid var(--highlight);
+  }}
+  .cover-top {{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
   }}
   .cover-tag {{
-    font-size: 7.5pt;
+    font-size: 7pt;
     font-weight: 600;
-    letter-spacing: 2.5px;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.55);
-    margin-bottom: 10pt;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 6pt;
   }}
   .cover-title {{
-    font-size: 24pt;
+    font-size: 20pt;
     font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 8pt;
+    line-height: 1.15;
+    margin-bottom: 5pt;
   }}
   .cover-sub {{
-    font-size: 11pt;
-    color: rgba(255,255,255,0.75);
+    font-size: 9.5pt;
+    color: rgba(255,255,255,0.7);
     font-weight: 300;
+  }}
+  .cover-link {{
+    margin-top: 8pt;
+  }}
+  .cover-link a {{
+    color: rgba(255,255,255,0.8);
+    font-size: 8pt;
+    font-weight: 500;
+    border-bottom: 0.5pt solid rgba(255,255,255,0.3);
+    text-decoration: none;
+    letter-spacing: 0.3px;
   }}
   .cover-dot {{
     display: inline-block;
-    width: 6pt;
-    height: 6pt;
+    width: 5pt;
+    height: 5pt;
     background: var(--highlight);
     border-radius: 50%;
-    margin: 0 6pt;
+    margin: 0 5pt;
     vertical-align: middle;
   }}
 
-  /* ── Section headings ── */
+  /* ── Metrics row ── */
+  .metrics {{
+    display: flex;
+    gap: 7pt;
+    margin: 10pt 0 12pt 0;
+  }}
+  .metric-card {{
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
+    color: #fff;
+    border-radius: 5pt;
+    padding: 8pt 10pt;
+    flex: 1;
+    page-break-inside: avoid;
+  }}
+  .metric-value {{
+    font-size: 15pt;
+    font-weight: 700;
+    line-height: 1.1;
+  }}
+  .metric-label {{
+    font-size: 6.5pt;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    margin-top: 2pt;
+  }}
+
+  /* ── Headings ── */
   h1 {{
-    font-size: 20pt;
+    font-size: 15pt;
     font-weight: 700;
     color: var(--accent);
-    margin: 24pt 0 6pt 0;
-    padding-bottom: 6pt;
-    border-bottom: 2.5pt solid var(--highlight);
-    page-break-after: avoid;
-  }}
-
-  h2 {{
-    font-size: 14pt;
-    font-weight: 600;
-    color: var(--accent2);
-    margin: 20pt 0 6pt 0;
-    page-break-after: avoid;
-  }}
-
-  h3 {{
-    font-size: 11.5pt;
-    font-weight: 600;
-    color: var(--highlight);
     margin: 14pt 0 4pt 0;
+    padding-bottom: 4pt;
+    border-bottom: 2pt solid var(--highlight);
     page-break-after: avoid;
   }}
-
+  h2 {{
+    font-size: 11pt;
+    font-weight: 700;
+    color: var(--accent2);
+    margin: 10pt 0 3pt 0;
+    page-break-after: avoid;
+  }}
+  h3 {{
+    font-size: 9.5pt;
+    font-weight: 700;
+    color: var(--highlight);
+    margin: 8pt 0 2pt 0;
+    page-break-after: avoid;
+  }}
   h4 {{
-    font-size: 10.5pt;
+    font-size: 9pt;
     font-weight: 600;
     color: var(--text);
-    margin: 12pt 0 4pt 0;
+    margin: 7pt 0 2pt 0;
     page-break-after: avoid;
   }}
 
-  /* ── Body text ── */
-  p {{
-    margin: 0 0 9pt 0;
-    orphans: 3;
-    widows: 3;
-  }}
-
+  /* ── Body ── */
+  p {{ margin: 0 0 5pt 0; orphans: 3; widows: 3; }}
   strong {{ font-weight: 600; color: var(--accent); }}
   em {{ font-style: italic; color: var(--muted); }}
 
-  /* ── Links ── */
   a {{
     color: var(--highlight);
     text-decoration: none;
     border-bottom: 0.5pt solid rgba(233,69,96,0.3);
   }}
 
-  /* ── Lists ── */
-  ul, ol {{
-    margin: 0 0 9pt 0;
-    padding-left: 18pt;
-  }}
-  li {{
-    margin-bottom: 4pt;
-    line-height: 1.6;
-  }}
-  li > ul, li > ol {{
-    margin-top: 3pt;
-    margin-bottom: 3pt;
-  }}
+  ul, ol {{ margin: 0 0 5pt 0; padding-left: 14pt; }}
+  li {{ margin-bottom: 2pt; line-height: 1.45; }}
+  li > ul, li > ol {{ margin-top: 2pt; margin-bottom: 2pt; }}
 
   /* ── Code ── */
   code {{
-    font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
-    font-size: 8.5pt;
+    font-family: 'Courier New', monospace;
+    font-size: 7.5pt;
     background: var(--light-bg);
     border: 0.5pt solid var(--border);
-    border-radius: 3pt;
-    padding: 1pt 4pt;
+    border-radius: 2pt;
+    padding: 0.5pt 3pt;
     color: #d6336c;
   }}
-
   pre {{
     background: var(--accent);
-    border-left: 3.5pt solid var(--highlight);
-    border-radius: 5pt;
-    padding: 12pt 14pt;
-    margin: 10pt 0 14pt 0;
-    overflow-x: auto;
+    border-left: 3pt solid var(--highlight);
+    border-radius: 4pt;
+    padding: 7pt 10pt;
+    margin: 5pt 0 8pt 0;
     page-break-inside: avoid;
   }}
   pre code {{
-    font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
-    font-size: 8pt;
-    line-height: 1.55;
+    font-family: 'Courier New', monospace;
+    font-size: 7.5pt;
+    line-height: 1.45;
     background: none;
     border: none;
     padding: 0;
@@ -180,131 +201,52 @@ html = f"""<!DOCTYPE html>
     white-space: pre;
   }}
 
-  /* ── Horizontal rule ── */
   hr {{
     border: none;
-    border-top: 1pt solid var(--border);
-    margin: 20pt 0;
-  }}
-
-  /* ── Blockquote ── */
-  blockquote {{
-    border-left: 3pt solid var(--highlight);
-    background: var(--light-bg);
-    margin: 10pt 0;
-    padding: 10pt 14pt;
-    border-radius: 0 4pt 4pt 0;
-    font-style: italic;
-    color: var(--muted);
-    page-break-inside: avoid;
+    border-top: 0.5pt solid var(--border);
+    margin: 8pt 0;
   }}
 
   /* ── Tables ── */
   table {{
     width: 100%;
     border-collapse: collapse;
-    margin: 10pt 0 14pt 0;
-    font-size: 9.5pt;
+    margin: 5pt 0 8pt 0;
+    font-size: 8pt;
     page-break-inside: avoid;
   }}
-  thead tr {{
-    background: var(--accent);
-    color: #fff;
-  }}
+  thead tr {{ background: var(--accent); color: #fff; }}
   th {{
-    padding: 7pt 10pt;
+    padding: 5pt 8pt;
     font-weight: 600;
     text-align: left;
-    font-size: 9pt;
-    letter-spacing: 0.3px;
+    font-size: 7.5pt;
+    letter-spacing: 0.2px;
   }}
   td {{
-    padding: 6pt 10pt;
+    padding: 4pt 8pt;
     border-bottom: 0.5pt solid var(--border);
     vertical-align: top;
   }}
   tbody tr:nth-child(even) {{ background: var(--light-bg); }}
-  tbody tr:hover {{ background: #eef2ff; }}
 
-  /* ── Metric callout cards ── */
-  .metrics {{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10pt;
-    margin: 12pt 0 16pt 0;
-  }}
-  .metric-card {{
-    background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
-    color: #fff;
-    border-radius: 6pt;
-    padding: 12pt 16pt;
-    min-width: 100pt;
-    flex: 1;
-    page-break-inside: avoid;
-  }}
-  .metric-value {{
-    font-size: 18pt;
-    font-weight: 700;
-    color: #fff;
-    line-height: 1.1;
-  }}
-  .metric-label {{
-    font-size: 7.5pt;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.6);
-    margin-top: 3pt;
-  }}
-
-  /* ── Pill badges ── */
-  .badge {{
-    display: inline-block;
-    background: rgba(233,69,96,0.12);
-    color: var(--highlight);
-    border: 0.5pt solid rgba(233,69,96,0.3);
-    border-radius: 20pt;
-    padding: 1pt 7pt;
-    font-size: 8pt;
-    font-weight: 600;
-    letter-spacing: 0.3px;
-  }}
-
-  /* ── Section divider ── */
-  .part-header {{
-    background: var(--light-bg);
-    border-left: 4pt solid var(--highlight);
-    padding: 8pt 14pt;
-    margin: 24pt 0 10pt 0;
-    border-radius: 0 4pt 4pt 0;
-    page-break-after: avoid;
-  }}
-  .part-header p {{
-    font-size: 8pt;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--highlight);
-    margin: 0;
-  }}
-
-  /* remove the h1 rendered from markdown since we have a cover */
+  /* hide the h1 from markdown — we render it in the cover */
   .content > h1:first-child {{ display: none; }}
 </style>
 </head>
 <body>
 
-<!-- ─── Cover ─── -->
+<!-- Cover -->
 <div class="cover">
-  <div class="cover-tag">Single Grain &nbsp;·&nbsp; Open Challenge</div>
-  <div class="cover-title">General 000<br>Automation Engineer</div>
+  <div class="cover-tag">Single Grain &nbsp;·&nbsp; Open Challenge &nbsp;·&nbsp; General 000</div>
+  <div class="cover-title">Automation Engineer</div>
   <div class="cover-sub">JDE Work Order Automation &nbsp;<span class="cover-dot"></span>&nbsp; Mohamed AH</div>
-  <div style="margin-top:12pt;">
-    <a href="https://github.com/Mohamed-AH/automation" style="color:rgba(255,255,255,0.85); font-size:9pt; font-weight:500; border-bottom:0.5pt solid rgba(255,255,255,0.35); text-decoration:none; letter-spacing:0.3px;">github.com/Mohamed-AH/automation</a>
+  <div class="cover-link">
+    <a href="https://github.com/Mohamed-AH/automation">github.com/Mohamed-AH/automation</a>
   </div>
 </div>
 
-<!-- ─── Metrics banner ─── -->
+<!-- Metrics -->
 <div class="metrics">
   <div class="metric-card">
     <div class="metric-value">4,448</div>
@@ -324,7 +266,7 @@ html = f"""<!DOCTYPE html>
   </div>
 </div>
 
-<!-- ─── Markdown body ─── -->
+<!-- Body -->
 <div class="content">
 {body_html}
 </div>
@@ -337,4 +279,7 @@ HTML(string=html, base_url=str(Path(__file__).parent)).write_pdf(
     stylesheets=[],
     uncompressed_pdf=False,
 )
-print(f"PDF written to: {pdf_path}")
+
+import pypdf
+pages = len(pypdf.PdfReader(str(pdf_path)).pages)
+print(f"PDF written to: {pdf_path}  ({pages} pages)")
